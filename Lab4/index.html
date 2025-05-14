@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookSync - Share Your Recipes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CookSync</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Your Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 col-12 mb-4">
+                <h2>Share Your Recipe</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="recipeTitle" class="form-label">Recipe Title</label>
+                        <input type="text" class="form-control" id="recipeTitle" placeholder="Enter recipe title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingredients" class="form-label">Ingredients</label>
+                        <textarea class="form-control" id="ingredients" rows="3" placeholder="Enter ingredients"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fileInput" class="form-label">Upload Image</label>
+                        <input class="form-control" type="file" id="fileInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="timeTaken" class="form-label">Time Taken (minutes)</label>
+                        <input type="number" class="form-control" id="timeTaken" placeholder="Enter time in minutes">
+                    </div>
+                    <div class="mb-3">
+                        <label>Preferences</label><br>
+                        <input type="checkbox" id="preference1"> Vegetarian
+                        <input type="checkbox" id="preference2"> Gluten-Free
+                        <input type="checkbox" id="preference3"> Low-Carb
+                    </div>
+                    <div class="mb-3">
+                        <label>Subscription Plan</label><br>
+                        <input type="radio" name="subscription" value="free"> Free
+                        <input type="radio" name="subscription" value="premium"> Premium
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Recipe</button>
+                </form>
+            </div>
+
+            <!-- Recipe Feed Column (70% on large screens, full width on smaller screens) -->
+            <div class="col-lg-8 col-12">
+                <h2>Your Recipe Feed</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/avocado.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Vegan Avocado Toast</h5>
+                                <p class="card-text">A healthy and quick breakfast option with creamy avocado spread on toasted whole-grain bread.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More cards as needed -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/pasta.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                                <p class="card-text">Creamy fettuccine pasta served with tender chicken breast and a rich Parmesan cream sauce.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/pizza.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Margherita Pizza</h5>
+                                <p class="card-text">A classic Neapolitan pizza topped with fresh tomatoes, mozzarella, basil, and olive oil.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/bowl.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Smoothie Bowl</h5>
+                                <p class="card-text">A refreshing breakfast bowl with a creamy smoothie base, topped with granola, fruits, and seeds.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/tacos.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Beef Tacos</h5>
+                                <p class="card-text">Soft tacos filled with seasoned ground beef, lettuce, cheese, and your favorite toppings.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/asparagus.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Grilled Salmon</h5>
+                                <p class="card-text">A light dish with grilled salmon served alongside roasted asparagus.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/syrup.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title"> Pancakes with Maple Syrup</h5>
+                                <p class="card-text">Fluffy, golden pancakes served with a drizzle of maple syrup and fresh fruit.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="assets/images/salad.jpg" class="card-img-top" alt="Recipe Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Caesar Salad</h5>
+                                <p class="card-text">Crisp romaine lettuce, crunchy croutons, and a creamy Caesar dressing topped with Parmesan cheese.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-5 py-3">
+        <div class="text-center p-3">
+            © 2024 CookSync. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
