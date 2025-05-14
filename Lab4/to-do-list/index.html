@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List App</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --danger-color: #dc3545;
+      --completed-color: #6c757d;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .todo-container {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #taskInput {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #addTaskBtn {
+      padding: 0.75rem 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #addTaskBtn:hover {
+      background-color: #0056b3;
+    }
+
+    ul#taskList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f1f1;
+      padding: 0.75rem 1rem;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .task-item.completed span {
+      text-decoration: line-through;
+      color: var(--completed-color);
+    }
+
+    .task-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .task-buttons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .complete-btn {
+      color: green;
+    }
+
+    .delete-btn {
+      color: var(--danger-color);
+    }
+
+    #noTasksMsg {
+      text-align: center;
+      color: #888;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 500px) {
+      .input-group {
+        flex-direction: column;
+      }
+
+      #addTaskBtn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="todo-container" aria-label="To-Do List App">
+    <h1>To-Do List</h1>
+
+    <section class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a new task" aria-label="Task input" />
+      <button id="addTaskBtn" aria-label="Add task">Add</button>
+    </section>
+
+    <ul id="taskList" aria-live="polite"></ul>
+    <p id="noTasksMsg">No tasks available.</p>
+  </main>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
